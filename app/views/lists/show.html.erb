@@ -6,23 +6,24 @@
   </p>
 
   <h3>Movies</h3>
-  <ul>
-    <% @list.movies.each do |movie| %>
-      <li>
-        <strong>title:</strong>
-        <%= movie.title %>
-        | <strong>overview:</strong>
-        <%= movie.overview %>
-        | <strong>rating:</strong>
-        <%= movie.rating %>
-        | <strong>poster:</strong>
-        <%= image_tag movie.poster_url %>
-        <li>
-          <%= movie.bookmarks.last.comment %>
-        </li>
-      </li>
-    <% end %>
-  </ul>
+
+  <% @list.movies.each do |movie| %>
+    <div class="container">
+      <div class="row py-3">
+        <div class="col-4">
+        <%= image_tag movie.poster_url, width: 200 %>
+        </div>
+        <div class="col-6">
+          <p><strong><%= movie.title %></strong></p>
+          <p><%= movie.overview %></p>
+          <p><strong>rating:</strong>
+            <%= movie.rating %></p>
+          <p><strong>comment:</strong>
+            <%= movie.bookmarks.last.comment %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
 
   <%= link_to 'Make a Bookmark', new_list_bookmark_path(@list) %>
