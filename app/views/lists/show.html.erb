@@ -15,8 +15,8 @@
         <%= movie.overview %>
         | <strong>rating:</strong>
         <%= movie.rating %>
-        | <strong>url:</strong>
-        <%= movie.poster_url %>
+        | <strong>poster:</strong>
+        <%= image_tag movie.poster_url %>
         <li>
           <%= movie.bookmarks.last.comment %>
         </li>
