@@ -25,6 +25,25 @@
     </div>
   <% end %>
 
+  <hr>
+  <h3>Reviews</h3>
+  <div class="row">
+    <% @list.reviews.each do |review| %>
+      <div class="col-6">
+        <p><strong>comment:</strong>
+          <%= review.comment %></p>
+        <p><strong>rating:</strong>
+          <%= review.rating %></p>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+  <h3>Write a review</h3>
+  <%= simple_form_for [@list, @review] do |f| %>
+    <%= f.input :comment, placeholder: 'Enter a comment', label: false %>
+    <%= f.input :rating %>
+    <%= f.submit %>
+  <% end %>
 
   <%= link_to 'Make a Bookmark', new_list_bookmark_path(@list) %>
   <%= link_to 'Delete a Bookmark', bookmark_path(@list), method: :delete, data: { confirm: "Are you sure?" } %>
