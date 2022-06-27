@@ -30,8 +30,10 @@
   <div class="row">
     <% @list.reviews.each do |review| %>
       <div class="col-6">
-        <p><%= review.comment %></p>
-        <p><%= review.rating %></p>
+        <p><strong>comment:</strong>
+          <%= review.comment %></p>
+        <p><strong>rating:</strong>
+          <%= review.rating %></p>
       </div>
     <% end %>
   </div>
