@@ -1,24 +1,5 @@
-# README
+<a href="https://branca-watch-list.herokuapp.com/"><h3 align="center">Watch List</h3></a>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  <p align="center">
+      Plataforma desenvolvida para criação de listas de filmes, contendo resumo, notas, poster e comentários. 
+   <p/>
