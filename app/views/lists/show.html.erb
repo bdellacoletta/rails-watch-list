@@ -44,7 +44,9 @@
     <%= f.submit %>
   <% end %>
 
-  <%= link_to 'Make a Bookmark', new_list_bookmark_path(@list) %>
-  <%= link_to 'Delete a Bookmark', bookmark_path(@list), method: :delete, data: { confirm: "Are you sure?" } %>
-  <%= link_to 'Back', lists_path %>
+<br>
+
+  <%= link_to 'Home', lists_path, class: "btn btn-secondary" %>
+  <%= link_to 'Make a Bookmark', new_list_bookmark_path(@list), class: "btn btn-flat" %>
+  <%= link_to 'Delete a Bookmark', bookmark_path(@list), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
 </div>
